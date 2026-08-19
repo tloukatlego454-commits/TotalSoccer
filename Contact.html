@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TotalSoccer</title>
+    <meta name="description" content="Contact TotalSoccer - visit our stores in Vaal, Johannesburg, Pretoria, Cape Town, and Durban. Get directions and contact information.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>⚽ TOTAL<span>SOCCER</span></h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact <span>Us</span></h1>
+            <p>Visit our stores across South Africa or get in touch with our team.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <h2>Send Us a <span>Message</span></h2>
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Your name" required>
+                                <div class="error-message">Please enter your name</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="Your email" required>
+                                <div class="error-message">Please enter a valid email</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+                            <div class="error-message">Please enter a subject</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="4" placeholder="Your message..." required></textarea>
+                            <div class="error-message">Please enter your message</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                    <div id="contactSuccess" class="form-success" style="display: none;">
+                        <h3>✅ Message Sent!</h3>
+                        <p>Thank you for contacting TotalSoccer. We'll respond within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Stores</span>
+                <h2>Find Us <span>Nationwide</span></h2>
+                <p>Visit any of our 5 locations across South Africa.</p>
+            </div>
+            <div class="locations-grid">
+                <!-- Location 1: Vaal -->
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Vaal (Headquarters)</h3>
+                    <p>123 Soccer Street, Vaal</p>
+                    <p>📞 +27 67 456 7890</p>
+                    <p>🕐 Mon-Fri: 9am-6pm, Sat: 9am-3pm</p>
+                    <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions →</a>
+                </div>
+
+                <!-- Location 2: Johannesburg -->
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Johannesburg</h3>
+                    <p>456 Game Drive, Sandton, Johannesburg</p>
+                    <p>📞 +27 89 789 7891</p>
+                    <p>🕐 Mon-Fri: 9am-6pm, Sat: 9am-3pm</p>
+                    <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions →</a>
+                </div>
+
+                <!-- Location 3: Pretoria -->
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Pretoria</h3>
+                    <p>789 Capital Street, Hatfield, Pretoria</p>
+                    <p>📞 +27 123 456 7892</p>
+                    <p>🕐 Mon-Fri: 9am-6pm, Sat: 9am-3pm</p>
+                    <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions →</a>
+                </div>
+
+                <!-- Location 4: Cape Town -->
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Cape Town</h3>
+                    <p>101 Stadium Road, Green Point, Cape Town</p>
+                    <p>📞 +27 123 456 7893</p>
+                    <p>🕐 Mon-Fri: 9am-6pm, Sat: 9am-3pm</p>
+                    <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions →</a>
+                </div>
+
+                <!-- Location 5: Durban -->
+                <div class="location-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Durban</h3>
+                    <p>202 Beach Road, Durban</p>
+                    <p>📞 +27 69 789 2567</p>
+                    <p>🕐 Mon-Fri: 9am-6pm, Sat: 9am-3pm</p>
+                    <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Embed -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-wrapper">
+                <h2>Find Us on <span>Google Maps</span></h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14326.456789!2d27.9087!3d-26.7221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9697b7b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sVaal%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1700000000000" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="TotalSoccer Store Locations">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>⚽ TOTALSOCCER</h3>
+                    <p>South Africa's premier online soccer store. Quality gear for players and fans since 2026.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📞 +27 63 459 3089</p>
+                    <p>✉️ info@totalsoccer.co.za</p>
+                    <p>📍 Vaal, South Africa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TotalSoccer. All rights reserved. | Designed by Katlego Tlou</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
