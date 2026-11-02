@@ -80,7 +80,8 @@
                 </div>
 
                 <div class="form-container">
-                    <form id="enquiryForm" novalidate>
+                    <!-- Added action attribute as required by the brief -->
+<form id="enquiryForm" action="mailto:info@totalsoccer.co.za" method="post" enctype="text/plain" novalidate>
                         <div class="form-group">
                             <label for="fullName">Full Name *</label>
                             <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>

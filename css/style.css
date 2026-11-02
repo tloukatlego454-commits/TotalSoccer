@@ -1444,3 +1444,196 @@ footer {
     h1 span, h2 span { color: black !important; }
     p { color: black !important; }
 }
+/* ========================================
+   PART 3: JAVASCRIPT ENHANCEMENTS CSS
+   ======================================== */
+
+/* ----- FAQ Accordion ----- */
+.faq-section {
+    padding: var(--sp-4xl) 0;
+    background: var(--section-bg);
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    margin-bottom: var(--sp-md);
+    overflow: hidden;
+    transition: var(--t-base);
+}
+
+.accordion-item:hover {
+    border-color: var(--border-hover);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: var(--sp-lg);
+    background: transparent;
+    border: none;
+    text-align: left;
+    color: var(--moon);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--t-base);
+}
+
+.accordion-header:hover {
+    color: var(--green);
+}
+
+.accordion-header .icon {
+    font-size: 1.5rem;
+    color: var(--green);
+    transition: transform var(--t-base);
+}
+
+.accordion-item.active .accordion-header .icon {
+    transform: rotate(45deg); /* Turns + into x */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-content p {
+    padding: 0 var(--sp-lg) var(--sp-lg) var(--sp-lg);
+    margin: 0;
+    color: var(--neon);
+}
+
+/* ----- Gallery & Lightbox ----- */
+.gallery-section {
+    padding: var(--sp-4xl) 0 var(--sp-5xl);
+    background: var(--section-bg-alt);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--t-slow);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--t-base);
+    backdrop-filter: blur(4px);
+}
+
+.gallery-overlay span {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: var(--t-base);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay span {
+    transform: translateY(0);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity var(--t-base);
+}
+
+.lightbox.show {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: var(--r-md);
+    box-shadow: 0 0 50px rgba(74, 222, 128, 0.2);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    transform: scale(0.9);
+    transition: transform var(--t-base);
+}
+
+.lightbox.show .lightbox-img {
+    transform: scale(1);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: var(--moon);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--t-base);
+    line-height: 1;
+}
+
+.close-lightbox:hover {
+    color: var(--green);
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .close-lightbox {
+        top: 20px;
+        right: 25px;
+        font-size: 2.5rem;
+    }
+}
